@@ -1,6 +1,9 @@
-%% Jacobi Method
 function [time,iteration] = Jacobi(A,n,b,x0,tol,itMax)
-
+% Jacobi Method for solving linear systems
+% Inputs: 
+% matrix A, vector b, dimension of matrix n, initial solution x0, tolerance tol, and max iterations allowed itMax
+% Outputs:
+% time and iterations it takes to arrive at solution within certain tolerance
 it = 0;
 xOld = x0;
 tic
