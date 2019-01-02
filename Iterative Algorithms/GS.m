@@ -1,5 +1,10 @@
 %% GS Method
 function [time,iteration] = GS(A,n,b,x0,tol,itMax)
+% Gauss-Seidel Method for solving linear systems
+% Inputs: 
+% matrix A, vector b, initial solution x0, tolerance tol, and max iterations allowed itMax
+% Outputs:
+% time and iterations it takes for the algorithm to reach the solution within certain tolerance
 
 it = 0;
 xOld = x0;
