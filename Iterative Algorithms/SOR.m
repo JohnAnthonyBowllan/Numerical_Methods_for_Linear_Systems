@@ -1,6 +1,10 @@
-%% SOR Method
 function [time,iteration] = SOR(A,n,b,x0,tol,itMax,omega)
-
+% Successive Over-Relaxation Method for solving linear systems
+% Inputs: 
+% matrix A, dimension of matrix n, vector b, initial solution x0, tolerance tol, max iterations allowed itMax,
+% and weight parameter omega
+% Outputs:
+% approximate solution xApprox and time
 it = 0;
 xOld = x0;
 tic
