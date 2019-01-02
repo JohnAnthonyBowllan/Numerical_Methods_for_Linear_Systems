@@ -1,7 +1,9 @@
 function [xApprox,time] = CGmethod(A,b,x0,tol,itMax)
-% put your explanation of the function here, explaining what it does, the
-% necessary inputs, and the outputs
-%
+% Conjugate Gradient Method for solving linear systems
+% Inputs: 
+% matrix A, vector b, initial solution x0, tolerance tol, and max iterations allowed itMax
+% Outputs:
+% approximate solution xApprox and time
 xOld = x0;
 rOld = b-A*xOld;
 dOld = rOld;
