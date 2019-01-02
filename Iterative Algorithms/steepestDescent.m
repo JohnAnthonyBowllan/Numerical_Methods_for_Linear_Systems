@@ -1,7 +1,9 @@
 function [xApprox,time,iteration,xCoord,yCoord] = steepestDescent(A,b,x0,tol,itMax)
-% put your explanation of the function here, explaining what it does, the
-% necessary inputs, and the outputs
-%
+% Steepest Descent Method for solving linear systems
+% Inputs: 
+% matrix A, vector b, initial solution x0, tolerance tol, and max iterations allowed itMax
+% Outputs:
+% approximate solution xApprox and time
  
 
 xOld = x0;
@@ -18,7 +20,7 @@ for k = 1:itMax
     xCoord = [xCoord; xNew(1)];
     yCoord = [yCoord; xNew(2)];
     rNew = b - A*xNew;
-    resNorm = norm(rNew); %ADD MORE CONVERGENCE CRITERIA
+    resNorm = norm(rNew); 
     if (resNorm < tol)
         display(['Solution Converged in ' num2str(k) ' iterations'])
         xApprox = xNew;
